@@ -66,8 +66,8 @@ export async function POST(request: NextRequest) {
       payment_method_types: ['card'],
       customer: customer.id,
       mode: "payment",
-      success_url: "http://localhost:3000/payments/success?token=" + customer.id,
-      cancel_url: "http://localhost:3000/payments/cancel?token=" + customer.id,
+      success_url: "https://etrade-alpha.vercel.app/payments/success?token=" + customer.id,
+      cancel_url: "https://etrade-alpha.vercel.app/payments/cancel?token=" + customer.id,
       line_items: lineItems,
       metadata: {
         userId: tokenVerify._id,
