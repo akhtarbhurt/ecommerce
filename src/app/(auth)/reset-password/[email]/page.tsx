@@ -54,7 +54,7 @@ export default function ResetPassword({
     <>
       <ToastContainer />
       <div className="h-screen w-screen flex justify-center items-center">
-        <div className="w-[500px] p-5 rounded-lg shadow-lg">
+        <div className="w-[500px] p-5 rounded-lg shadow-lg bg-white ">
           <h1 className="text-2xl font-bold">Reset Passowrd ?</h1>
 
           <form onSubmit={submit}>
@@ -88,7 +88,7 @@ export default function ResetPassword({
             )}
             <div className="mt-5">
               <button
-                className="w-full bg-black p-2 rounded-lg text-white"
+                className="w-full bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white"
                 disabled={loading}
               >
                 {loading ? "Processing.." : "Submit"}
