@@ -86,15 +86,18 @@ export default function Navbar() {
                 <div className='hover:bg-red-300 cursor-pointer p-3 rounded-3xl hover:text-white text-lg ' onClick={() => setOpenSearch(true)} >
                     <FaSearch />
                 </div>
-
-                <div className='hover:bg-red-300 cursor-pointer p-3 rounded-3xl hover:text-white text-lg relative ' >
-                    <span className='absolute -top-0 right-0 text-sm bg-red-400 p-1 rounded-lg h-5 w-5 flex justify-center items-center text-white ' >  {isWishList && status === 'authenticated' ? isWishList.length : 0} </span>
-                    <Link href={'/wishlist'}  > <FaHeart /> </Link>
-                </div>
-                <div className='hover:bg-red-300 cursor-pointer p-3 rounded-3xl hover:text-white text-lg relative ' >
-                    <span className='absolute -top-0 right-0 text-sm bg-red-400 p-1 rounded-lg h-5 w-5 flex justify-center items-center text-white ' >  {isCart && status === 'authenticated' ? isCart.length : 0} </span>
-                    <Link href={'/cart'}  > <FiShoppingCart /> </Link>
-                </div>
+                <Link href={'/wishlist'}  >
+                    <div className='hover:bg-red-300 cursor-pointer p-3 rounded-3xl hover:text-white text-lg relative ' >
+                        <span className='absolute -top-0 right-0 text-sm bg-red-400 p-1 rounded-lg h-5 w-5 flex justify-center items-center text-white ' >  {isWishList && status === 'authenticated' ? isWishList.length : 0} </span>
+                        <FaHeart />
+                    </div>
+                </Link>
+                <Link href={'/cart'}  >
+                    <div className='hover:bg-red-300 cursor-pointer p-3 rounded-3xl hover:text-white text-lg relative ' >
+                        <span className='absolute -top-0 right-0 text-sm bg-red-400 p-1 rounded-lg h-5 w-5 flex justify-center items-center text-white ' >  {isCart && status === 'authenticated' ? isCart.length : 0} </span>
+                        <FiShoppingCart />
+                    </div>
+                </Link>
 
                 <div
                     className='hover:bg-red-300 cursor-pointer p-2 flex items-center gap-2 rounded-3xl hover:text-white text-lg'
@@ -123,8 +126,8 @@ export default function Navbar() {
                         {
                             admin === true && status === "authenticated" && (
                                 <>
-                                    
-                                    
+
+
                                     <li onClick={handleBox} > <Link href={'/account'} > My Account </Link> </li>
                                     <hr className='border-gray-500 w-full mt-2 ' />
                                     <li onClick={handleBox} > <Link href={'/order'} > My Orders </Link> </li>
