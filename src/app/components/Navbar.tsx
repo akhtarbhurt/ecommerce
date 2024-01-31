@@ -108,11 +108,11 @@ export default function Navbar() {
                     <ul>
                         {status === "authenticated" && admin === false ? (
                             <>
-                                <li onClick={handleBox} > <Link href={'account'} > My Account </Link> </li>
+                                <li onClick={handleBox} > <Link href={'/account'} > My Account </Link> </li>
                                 <hr className='border-gray-500 w-full mt-2 ' />
-                                <li onClick={handleBox} > <Link href={'order'} > My Orders </Link> </li>
+                                <li onClick={handleBox} > <Link href={'/order'} > My Orders </Link> </li>
                                 <hr className='border-gray-500 w-full mt-2 ' />
-                                <li onClick={handleBox} > <Link href={'setting'} > Setting </Link> </li>
+                                <li onClick={handleBox} > <Link href={'/setting'} > Setting </Link> </li>
                                 <hr className='border-gray-500 w-full mt-2 ' />
                             </>
                         ) : (
@@ -125,11 +125,11 @@ export default function Navbar() {
                                 <>
                                     
                                     
-                                    <li onClick={handleBox} > <Link href={'account'} > My Account </Link> </li>
+                                    <li onClick={handleBox} > <Link href={'/account'} > My Account </Link> </li>
                                     <hr className='border-gray-500 w-full mt-2 ' />
-                                    <li onClick={handleBox} > <Link href={'order'} > My Orders </Link> </li>
+                                    <li onClick={handleBox} > <Link href={'/order'} > My Orders </Link> </li>
                                     <hr className='border-gray-500 w-full mt-2 ' />
-                                    <li onClick={handleBox} > <Link href={'setting'} > Setting </Link> </li>
+                                    <li onClick={handleBox} > <Link href={'/setting'} > Setting </Link> </li>
                                     <hr className='border-gray-500 w-full mt-2 ' />
                                     <li className=' mt-2 font-semibold ' onClick={handleBox} >
                                         <Link href={'/admin/dashboard'} > Admin Dashboard </Link>
